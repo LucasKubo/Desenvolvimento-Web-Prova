@@ -1,0 +1,78 @@
+body{
+    margin:0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+.menu-nav{
+    width: 40%;
+}
+.menu-nav-list{
+    width: 100%;
+    display: flex;
+    padding: 0;
+}
+.menu-nav-list-item{
+    list-style: none;
+    width: 28%;
+    margin: 3%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(200, 81, 37);
+    padding: 2px;
+}
+.menu-nav-list-item-link{
+   text-decoration: none;
+   color:white;
+}
+
+main{
+    padding: 10px;
+    background:linear-gradient(rgb(206, 113, 7),rgb(236, 130, 8));
+    height: 350px;
+}
+
+.main-titulo{
+    text-align: center;
+}
+.content-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer{
+    background: linear-gradient(rgb(236, 130, 8),rgb(250, 85, 25));
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+}
+.copyright{
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    margin:0;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/*Páginas parquimetro e cadastro*/
+.ticket, .relatorio{
+    width: 50%;
+    background-color: rgb(236, 130, 8);
+    border: 2px solid white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.ticket-titulo, .relatorio-titulo{
+    color:white;
+}
+
+/*página home*/
+
+.main-img{
+    text-align: center;
+}
