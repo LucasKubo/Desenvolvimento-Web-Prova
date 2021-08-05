@@ -36,14 +36,10 @@ function mostrarDados(event){
     let nomeIn = document.querySelector("#nomeIn");
     let cpfIn = document.querySelector("#cpfIn");
     let dataNascIn = document.querySelector("#dataNascIn");
-    let nomeOut = document.querySelector("#nomeOut");
-    let cpfOut = document.querySelector("#cpfOut");
-    let dataNascOut = document.querySelector("#dataNascOut");
+    let relatorioResultado = document.querySelector(".relatorio-resultado");
     
     //Limpando HTML
-    nomeOut.textContent = "";
-    cpfOut.textContent = "";
-    dataNascOut.textContent = "";
+    relatorioResultado.textContent = "";
 
     //Atribuindo valores dos elementos
     nome = nomeIn.value;
@@ -52,17 +48,17 @@ function mostrarDados(event){
 
     //Verificando se tudo foi preenchido
     if(nome==""){
-        nomeOut.textContent = "Coloque um nome !"
+        relatorioResultado.textContent = "Coloque um nome !"
         nomeIn.focus();
         return;
     }
     if(cpf == "" ){
-        cpfOut.textContent = "Coloque um cpf !"
+        relatorioResultado.textContent = "Coloque um cpf !"
         cpfIn.focus();
         return;
     }
     if(dataNasc == ""){
-        dataNascOut.textContent = "Coloque a data de nascimento"
+        relatorioResultado.textContent = "Coloque a data de nascimento"
         dataNascIn.focus();
         return;
     }
@@ -72,9 +68,9 @@ function mostrarDados(event){
     let idade = calculaIdade(usuario.dataNasc);
 
     //Exibindo os dados
-    nomeOut.textContent = "Nome: " + usuario.nome;
-    cpfOut.textContent = "CPF: " + usuario.cpf;
-    dataNascOut.textContent = "Idade: " + idade;
+    relatorioResultado.innerHTML = "Nome: " + usuario.nome + "<br>"+ 
+                                    "CPF: " + usuario.cpf + "<br>" + 
+                                    "Idade: " + idade;
 }
 let botaoCadastro = document.querySelector("#botaoCadastro");
 botaoCadastro.addEventListener('click',mostrarDados)
