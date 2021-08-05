@@ -5,23 +5,27 @@ function pessoa(nome,cpf,dataNasc){
 }
 
 function calculaIdade(dataNasc){
+    // Pegando ano e mes atual
     let anoAtual = new Date().getFullYear();
     let mesAtual = new Date().getMonth() + 1;
+    let diaAtual = new Date().getDate();
 
     // Pegando partes da string que representa cada variavel (dia, mes, ano) -- obs
     let anoNasc = dataNasc.slice(0,4);
     let mesNasc = dataNasc.slice(5,7);
     let diaNasc = dataNasc.slice(8,10);
 
+    // Calculando idade, supondo que a pessoa já tenha feito aniversário no ano atual
     let idade = anoAtual - anoNasc;
 
-    if(mesAtual < mesNasc){
+    // Verificando se a pessoa ja fez aniversário no ano atual
+    if(mesNasc > mesAtual ){
         idade--;
         return idade;
     }
 
-    if(mesAtual == mesNasc){ 
-        if(new Date().getDate() < diaNasc ){ 
+    if(mesNasc == mesAtual){ 
+        if(diaAtual < diaNasc ){ 
             idade--; 
             return idade;
         }
@@ -67,10 +71,17 @@ function mostrarDados(event){
     let usuario = new pessoa(nome,cpf,dataNasc);
     let idade = calculaIdade(usuario.dataNasc);
 
+    //Verificando se idade é negativa
+    if(idade < 0){
+        relatorioResultado.textContent = "Coloque a data de nascimento válida"
+        dataNascIn.focus();
+        return;
+    }
+
     //Exibindo os dados
     relatorioResultado.innerHTML = "Nome: " + usuario.nome + "<br>"+ 
                                     "CPF: " + usuario.cpf + "<br>" + 
-                                    "Idade: " + idade;
+                                    "Idade: " + idade + " anos";
 }
 let botaoCadastro = document.querySelector("#botaoCadastro");
 botaoCadastro.addEventListener('click',mostrarDados)
