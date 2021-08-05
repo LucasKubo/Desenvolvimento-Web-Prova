@@ -38,7 +38,7 @@ header{
 main{
     padding: 10px;
     background:linear-gradient(rgb(206, 113, 7),rgb(236, 130, 8));
-    height: 500px;
+    height: 100vh;
 }
 
 .main-titulo{
