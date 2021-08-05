@@ -9,38 +9,54 @@
   </head>
   <body>
     <header>
-
-      <h1 class="menu-icone"><a href="index.html"><img src="../img/icone.png" width="30px"></a></h1>
+      <h1 class="menu-icone">
+        <a href="index.html"><img src="../img/icone.png" width="30px" /></a>
+      </h1>
 
       <nav class="menu-nav">
         <ul class="menu-nav-list">
-          <li class="menu-nav-list-item"><a href="index.html" id="menu-home" class="menu-nav-list-item-link">Home</a></li>
-          <li class="menu-nav-list-item"><a href="parquimetro.html" id="menu-parquimetro" class="menu-nav-list-item-link">Parquímetro</a></li>
-          <li class="menu-nav-list-item"><a href="cadastro.html" id="menu-cadastro" class="menu-nav-list-item-link">Cadastro</a></li> 
+          <li class="menu-nav-list-item">
+            <a href="index.html" id="menu-home" class="menu-nav-list-item-link"
+              >Home</a
+            >
+          </li>
+          <li class="menu-nav-list-item">
+            <a
+              href="parquimetro.html"
+              id="menu-parquimetro"
+              class="menu-nav-list-item-link"
+              >Parquímetro</a
+            >
+          </li>
+          <li class="menu-nav-list-item">
+            <a
+              href="cadastro.html"
+              id="menu-cadastro"
+              class="menu-nav-list-item-link"
+              >Cadastro</a
+            >
+          </li>
         </ul>
       </nav>
-
     </header>
     <main>
       <h1 class="main-titulo">Parquímetro</h1>
       <div class="content-container">
         <form>
           <p>
-            <label for="placaIn">Placa: </label>
-            <input type="text" id="placaIn"/>
+            <label for="placaIn">Placa </label>
+            <input type="text" id="placaIn" />
           </p>
           <p>
             <label for="valorIn">Insira o dinheiro R$: </label>
-            <input type="text" id="valorIn"/>
+            <input type="number" id="valorIn" />
           </p>
           <button id="botao-enviar">Enviar</button>
         </form>
         <div class="ticket">
           <h2 class="ticket-titulo">Ticket</h2>
           <div class="ticket-content">
-            <p class="tempoOut"></p>
-            <p class="trocoOut"></p>
-            <p class="placaOut"></p>
+            <p class="ticket-resultado"></p>
           </div>
         </div>
       </div>
